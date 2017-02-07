@@ -1,7 +1,9 @@
 package core
 
-import "domain"
-import "interactor"
+import (
+	"domain"
+	"interactor"
+)
 
 // Database connection here please :)
 type (
