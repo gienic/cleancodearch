@@ -1,2 +1,2 @@
 # cleancodearch
-Clean Code Architecture Example
+Clean Code Architecture Example written in GO
