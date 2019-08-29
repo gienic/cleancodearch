@@ -7,15 +7,13 @@ this.ReadSupportedContainer(reader)
 
 internal void ReadSupportedContainer(IConfigurationReader reader)
 {
-  // TODO: richtig auslesen
-  // <Compressed>Wert<Compressed>
   string compressed = reader.GetStringValue("SupportedCntainer.Compressed")
   string mime = reader.GetStringValue("SupportedCntainer.Mime")
   
-  string[] compressed_items = compressed.Split(' ');  
+  string[] compressed_items = compressed.Split(" ");  
   List<string> compressed_list = new List<string>(compressed_items);
   
-  string[] mime_items = mime.Split(' ');  
+  string[] mime_items = mime.Split(" ");  
   List<string> mime_list = new List<string>(mime_items);
  
   this.SupportedContainerCompressed = compressed_list;
