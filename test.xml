@@ -1,0 +1,12 @@
+<SupportedContainer>
+  <Compressed>
+    <Container Extension=".zip">
+    <Container Extension=".7zip">
+    <Container Extension=".tar">
+  </Compressed>
+  <Mime>
+    <Container Extension=".eml">
+    <Container Extension=".msg">
+    <Container Extension=".mht">
+  </Mime>
+</SupportedConatiner>
