@@ -1,9 +1,9 @@
 
-//In PluginConfiguration unter this.ReadAllowedAttachments(reader) im Konstructor
+//In PluginConfiguration unter this.ReadAllowedAttachments(reader) im Konstructor einfügen
 
 this.ReadSupportedContainer(reader)
 
-// Neue Funtion unter die Funktion ReadAllowedAttachments
+// Neue Funtion unter die Funktion ReadAllowedAttachments einfügen
 
 internal void ReadSupportedContainer(IConfigurationReader reader)
 {
@@ -21,8 +21,8 @@ internal void ReadSupportedContainer(IConfigurationReader reader)
   
 }
 
-// In IPluginConfiguration unter List<IAttachments> AllowedAttachments 
-
+// In IPluginConfiguration unter List<IAttachments> AllowedAttachments einfügen
+ 
 List<string> SupportedContainerCompressed {}
 List<string> SupportedContainerMime {}
 
