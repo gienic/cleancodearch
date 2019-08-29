@@ -27,4 +27,8 @@ internal void ReadSupportedContainer(IConfigurationReader reader)
 List<string> SupportedContainerCompressed {}
 List<string> SupportedContainerMime {}
 
+// neu
+
+List<string> compressedContainers = this.PluginConfiguration.SupportedContainerCompressed;
+List<string> mailContainers = this.PluginConfiguration.SupportedContainerMime;
 
