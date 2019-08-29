@@ -7,18 +7,19 @@ this.ReadSupportedContainer(reader)
 
 internal void ReadSupportedContainer(IConfigurationReader reader)
 {
-  string compressed = reader.GetStringValue("SupportedCntainer.Compressed")
-  string mime = reader.GetStringValue("SupportedCntainer.Mime")
+  this.SupportedContainerCompressed = new List<string>;
+  this.SupportedContainerMime = new List<string>;
   
-  string[] compressed_items = compressed.Split(" ");  
-  List<string> compressed_list = new List<string>(compressed_items);
+  foreach(string element in reader.GetChildElements("SupportedCntainer.Compressed"))
+  {
+    this.SupportedContainerCompressed.Add(reader.GetStringValue("Extension"));
+  }
   
-  string[] mime_items = mime.Split(" ");  
-  List<string> mime_list = new List<string>(mime_items);
+  foreach(string element in reader.GetChildElements("SupportedCntainer.Mime"))
+  {
+    this.SupportedContainerMime.Add(reader.GetStringValue("Extension"));
+  }
  
-  this.SupportedContainerCompressed = compressed_list;
-  this.SupportedContainerMime = mime_list;
-  
 }
 
 // In IPluginConfiguration unter List<IAttachments> AllowedAttachments einfügen
